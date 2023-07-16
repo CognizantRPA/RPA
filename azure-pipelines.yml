@@ -14,7 +14,7 @@ steps:
 - task: UiPathPack@3
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)\project.jason'
+    projectJsonPath: '$(Build.SourcesDirectory)'
     orchestratorConnection: 'AzureDevOps'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
