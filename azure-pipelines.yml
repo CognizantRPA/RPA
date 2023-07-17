@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: windows-latest
+  Default
 
 steps:
 
@@ -15,6 +15,7 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
+    outputType: 'Process'
     orchestratorConnection: 'AzureDevOps'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
@@ -29,3 +30,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
